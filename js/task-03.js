@@ -12,3 +12,17 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+let list = document.querySelector('.gallery')
+
+function getTemplate(image) {
+  return `<li><img src="${image.url}" /></li>`
+}
+
+
+function createMarkup(images) {
+const markup = images.map(getTemplate).join('\n');
+  list.insertAdjacentHTML('beforeend', markup);
+}
+
+createMarkup(images)
