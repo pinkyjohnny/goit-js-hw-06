@@ -15,5 +15,10 @@ ingredients.forEach((ingredient) => {
   li.textContent = ingredient;
   li.classList.add("item");
   ingredientsArray.push(li)
-  list.append(...ingredientsArray);
 });
+
+function ingredientsList() {
+  list.append(...ingredientsArray);
+}
+
+ingredientsList()
